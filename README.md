@@ -2,6 +2,10 @@
 
 #Details are coming soon..
 
+## Package Path
+hsh.lib.widgets.*;
+
+
 ## Adapter Constructors
 
 ```java
@@ -73,7 +77,7 @@ public void impl(){
 ## Caution
  + If you use custom layout, you must include textviews of which view ids are android.R.id.text1(@android:id/text1) and anroid.R.id.text2(@android:id/text2) - 꼭 포함 되어야 합니다
  + If you don`t do this, you will got a NullpointerException.
-
+ 
 ## Sample Picture
 ![Sample](https://raw.githubusercontent.com/imscs21/android-TwoStateAdapter/master/sample/Sample_2015-07-23-16-08-43.png)
 
