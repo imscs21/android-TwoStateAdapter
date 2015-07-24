@@ -86,13 +86,22 @@ public void impl(){
 	@Override
         protected boolean canCustomizeTextViewIds(){
 	// TODO: Implement this method
+	/*
+	*
+	added on ver 1.02
+	*
+	*/
 	return false;
          }
 
         @Override
         protected void onResetTextViewIds(int view_position, BaseTwoStateAdapter btsa){
 	// TODO: Implement this method
-
+	/*
+	*
+	added on ver 1.02
+	*
+	*/
 	btsa.setTextView1ID(int_id);
 	
 	btsa.setTextView2ID(int_id);
