@@ -11,8 +11,12 @@
 ```java
 
 public BaseTwoStateAdapter(Context context, List<BaseTwoStateContentContainer> objects) {
+//added on ver 1.02
+}
 
 public BaseTwoStateAdapter(Context context, BaseTwoStateContentContainer[] objects) {
+//added on ver 1.02
+}
 
 public BaseTwoStateAdapter(Context context, boolean isItemActivated, List<BaseTwoStateContentContainer> objects) {}
 
