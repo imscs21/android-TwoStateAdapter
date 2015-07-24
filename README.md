@@ -3,12 +3,16 @@
 #Details are coming soon..
 
 ## Package Path
-hsh.lib.widgets.*;
++ hsh.lib.widgets.*;
 
 
 ## Adapter Constructors
 
 ```java
+
+public BaseTwoStateAdapter(Context context, List<BaseTwoStateContentContainer> objects) {
+
+public BaseTwoStateAdapter(Context context, BaseTwoStateContentContainer[] objects) {
 
 public BaseTwoStateAdapter(Context context, boolean isItemActivated, List<BaseTwoStateContentContainer> objects) {}
 
@@ -56,10 +60,12 @@ public void howTo(){
 public void impl(){
 
 	ArrayList<BaseTwoStateContentContainer > list = new TwoStateList();
+	
 	list.add( new BaseTwoStateContentContainer().setTextAndReturnClass("upper text", "lower text"));
 	
 	    BaseTwoStateAdapter<BaseTwoStateContentContainer> ma = new BaseTwoStateAdapter<BaseTwoStateContentContainer>(mContext,false,list){
-	    @Override
+	    
+	@Override
 	protected void onBeforeItemSet(int position,  ViewGroup parent,View returnableParentView,TextView firstTextView,TextView secondTextView,BaseTwoStateContentContainer baseTwoStateContentContainer)	{
 		// TODO: Implement this method
 	}
@@ -69,13 +75,36 @@ public void impl(){
 	{
 		// TODO: Implement this method
 	}
+	
+	@Override
+        protected boolean canCustomizeTextViewIds(){
+	// TODO: Implement this method
+	return false;
+         }
+
+        @Override
+        protected void onResetTextViewIds(int view_position, BaseTwoStateAdapter btsa){
+	// TODO: Implement this method
+	/*
+	*
+	btsa.setTextView1ID(int_id);
+	
+	btsa.setTextView2ID(int_id);
+	
+	btsa.setTextViewIDs(firstId,secondId);
+	*
+	*/
+          }
+          
 	    };
+	    
+	    
 	   listview.setAdapter(ma);
 }
 ```
 
 ## Caution
- + If you use custom layout, you must include textviews of which view ids are android.R.id.text1(@android:id/text1) and anroid.R.id.text2(@android:id/text2) - 꼭 포함 되어야 합니다
+ + If you use custom layout and custom textview id, you have to redefinition canCustomizeTextViewIds methods and  onResetTextViewIds 
  + If you don`t do this, you will get a NullpointerException.
  
 ## Sample Picture
