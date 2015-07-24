@@ -1,10 +1,13 @@
 # android-TwoStateAdapter
 
-#Details are coming soon..
+######Details are coming soon..
 
 ## Package Path
 + hsh.lib.widgets.*;
 
+##Download
+> + [Download(way1)](https://github.com/imscs21/android-TwoStateAdapter/raw/master/library/androidTwoStateListAdapterLib.jar)
+> + [Download(way2)](https://github.com/imscs21/android-TwoStateAdapter/releases)
 
 ## Adapter Constructors
 
