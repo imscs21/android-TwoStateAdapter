@@ -89,15 +89,13 @@ public void impl(){
         @Override
         protected void onResetTextViewIds(int view_position, BaseTwoStateAdapter btsa){
 	// TODO: Implement this method
-	/*
-	*
+
 	btsa.setTextView1ID(int_id);
 	
 	btsa.setTextView2ID(int_id);
 	
 	btsa.setTextViewIDs(firstId,secondId);
-	*
-	*/
+
           }
           
 	    };
