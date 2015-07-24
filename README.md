@@ -104,7 +104,7 @@ public void impl(){
 ```
 
 ## Caution
- + If you use custom layout and custom textview id, you have to redefinition canCustomizeTextViewIds methods and  onResetTextViewIds 
+ + If you use custom layout and custom textview id, you have to redefine canCustomizeTextViewIds method and  onResetTextViewIds method by overriding each method.
  + If you don`t do this, you will get a NullpointerException.
  
 ## Sample Picture
